@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Математика 1-4: Пособие для учителя</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ШАПКА САЙТА -->
+    <header>
+        <h1>📐 Электронное пособие по математике</h1>
+        <p>Для преподавателей начальных классов. ФГОС 2026</p>
+    </header>
+
+    <!-- БОКОВОЕ МЕНЮ (Как оглавление учебника) -->
+   <nav>
+    <h3>📚 Навигация</h3>
+    <ul>
+        <li><a href="index.html" style="font-weight: bold;">1 класс (вы здесь)</a></li>
+        <li><a href="class2.html">2 класс</a></li>
+        <li><a href="class3.html">3 класс</a></li>
+        <li><a href="class4.html">4 класс</a></li>
+    </ul>
+    <h3>🧑‍🏫 Учителю</h3>
+    <ul>
+        <li><a href="method.html">📚 Методичка</a></li>
+        <li><a href="#">Контрольные</a></li>
+    </ul>
+</nav>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main>
+        <h2>🎲 Тренажер «Сложение в пределах 10»</h2>
+        <div class="game-box">
+            <p>Сколько будет? <span id="num1">3</span> + <span id="num2">2</span> = ?</p>
+            <input type="number" id="userAnswer" placeholder="Введи ответ">
+            <button id="checkBtn">✅ Проверить</button>
+            <p id="resultMessage"></p>
+            <button id="nextBtn">🔄 Следующий пример</button>
+        </div>
+
+        <!-- Блок с теорией для учителя -->
+        <div class="teacher-note">
+            <h3>💡 Методическая подсказка</h3>
+            <p>Попросите детей использовать счетные палочки или пальцы. Нажмите F5, чтобы сбросить статистику.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

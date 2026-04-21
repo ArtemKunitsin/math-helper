@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Методическая копилка · Математика 1–4</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили специально для страницы методички */
+        .method-section {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .method-section h2 {
+            color: #1d3557;
+            border-bottom: 3px solid #ffb347;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .method-section h3 {
+            color: #2a9d8f;
+            margin-top: 25px;
+        }
+        
+        .method-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 6px solid #a2d7fc;
+        }
+        
+        .method-card h4 {
+            margin-top: 0;
+            color: #e63946;
+            font-size: 20px;
+        }
+        
+        .download-link {
+            display: inline-block;
+            background: #2a9d8f;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 10px 10px 0 0;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .download-link:hover {
+            background: #21867a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        
+        .download-link.pdf {
+            background: #e63946;
+        }
+        
+        .download-link.pdf:hover {
+            background: #c1121f;
+        }
+        
+        .download-link.pptx {
+            background: #d65a31;
+        }
+        
+        .download-link.pptx:hover {
+            background: #bc4a25;
+        }
+        
+        .important-note {
+            background: #fff3cd;
+            border: 2px solid #ffb347;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .important-note strong {
+            color: #d65a31;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            background: #e9ecef;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .tab-btn:hover {
+            background: #a2d7fc;
+            color: #1d3557;
+        }
+        
+        .tab-btn.active {
+            background: #2a9d8f;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .fgos-badge {
+            background: #1d3557;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 15px;
+        }
+        
+        .plan-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .plan-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .plan-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-list li::before {
+            content: "📋 ";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 Методическая копилка преподавателя</h1>
+        <p>Математика 1–4 классы · ФГОС НОО · Поурочные планы, презентации, контрольные</p>
+    </header>
+
+    <nav>
+        <h3>📐 Навигация</h3>
+        <ul>
+            <li><a href="index.html">1 класс</a></li>
+            <li><a href="class2.html">2 класс</a></li>
+            <li><a href="class3.html">3 класс</a></li>
+            <li><a href="class4.html">4 класс</a></li>
+        </ul>
+        <h3>🧑‍🏫 Учителю</h3>
+        <ul>
+            <li><a href="method.html" style="font-weight: bold;">📚 Методичка (вы здесь)</a></li>
+            <li><a href="#">📊 Контрольные работы</a></li>
+            <li><a href="#">📝 Рабочие программы</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Вкладки по классам для удобства -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('all')">📌 Все классы</button>
+            <button class="tab-btn" onclick="showTab('class1')">1 класс</button>
+            <button class="tab-btn" onclick="showTab('class2')">2 класс</button>
+            <button class="tab-btn" onclick="showTab('class3')">3 класс</button>
+            <button class="tab-btn" onclick="showTab('class4')">4 класс</button>
+        </div>
+
+        <!-- ====== ВКЛАДКА: ВСЕ КЛАССЫ ====== -->
+        <div id="tab-all" class="tab-content active">
+            <div class="important-note">
+                <strong>🎯 Как работать с пособием:</strong> 
+                <p>Электронное пособие создано в соответствии с ФГОС НОО. Используйте тренажёры для фронтальной работы на интерактивной доске, для индивидуальной работы учеников на планшетах или в качестве домашнего задания. Все материалы можно скачать и адаптировать под свой класс.</p>
+            </div>
+
+            <div class="method-section">
+                <h2>📅 Календарно-тематическое планирование (общее)</h2>
+                <div class="method-card">
+                    <h4>КТП по математике 1–4 классы (ФГОС 2026)</h4>
+                    <p>Полное календарно-тематическое планирование на учебный год с указанием УУД и электронных ресурсов.</p>
+                    <a href="#" class="download-link pdf" onclick="alert('Демо-режим: здесь будет скачивание PDF файла с КТП')">📥 Скачать PDF (КТП)</a>
+                    <a href="#" class="download-link" onclick="alert('Демо-режим: здесь будет скачивание DOCX файла для редактирования')">📝 Скачать DOCX (редактируемый)</a>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h2>🎮 Игровые методики для всех классов</h2>
+                <div class="method-card">
+                    <h4>Математическое лото (1–4 классы)</h4>
+                    <p>Карточки для игры в лото: сложение, вычитание, умножение, деление. Можно использовать на этапе устного счёта.</p>
+                    <a href="#" class="download-link pdf" onclick="alert('Скачивание карточек для лото')">🎲 Скачать карточки</a>
+                </div>
+                <div class="method-card">
+                    <h4>Математические раскраски (1–4 классы)</h4>
+                    <p>Реши пример — раскрась картинку. Отличный материал для самостоятельной работы и домашнего задания.</p>
+                    <a href="#" class="download-link pdf" onclick="alert('Скачивание раскрасок')">🎨 Скачать раскраски</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== ВКЛАДКА: 1 КЛАСС ====== -->
+        <div id="tab-class1" class="tab-content">
+            <div class="method-section">
+                <h2>1️⃣ 1 класс <span class="fgos-badge">ФГОС</span></h2>
+                
+                <h3>📖 Поурочные планы</h3>
+                <div class="method-card">
+                    <h4>Раздел «Числа от 1 до 10. Нумерация» (28 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Счёт предметов. Один, два, три... <a href="#" onclick="alert('План урока 1')">📄 Скачать</a></li>
+                        <li>Урок 2. Пространственные представления (вверху, внизу, слева, справа) <a href="#" onclick="alert('План урока 2')">📄 Скачать</a></li>
+                        <li>Урок 3. Временные представления (раньше, позже, сначала, потом) <a href="#" onclick="alert('План урока 3')">📄 Скачать</a></li>
+                        <li>Урок 4. Сравнение групп предметов. «Столько же», «больше», «меньше» <a href="#" onclick="alert('План урока 4')">📄 Скачать</a></li>
+                    </ul>
+                    <a href="#" class="download-link pdf" style="margin-top: 15px;">📥 Скачать все планы (1 четв.)</a>
+                </div>
+
+                <div class="method-card">
+                    <h4>Раздел «Сложение и вычитание в пределах 10» (54 часа)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Сложение и вычитание вида □ + 1, □ – 1 <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Прибавление и вычитание числа 2 <a href="#">📄 Скачать</a></li>
+                        <li>Урок 3. Слагаемые. Сумма <a href="#">📄 Скачать</a></li>
+                        <li>Урок 4. Задача. Структура задачи <a href="#">📄 Скачать</a></li>
+                        <li>Урок 5. Таблица сложения в пределах 10 <a href="#">📄 Скачать</a></li>
+                    </ul>
+                    <a href="#" class="download-link pdf" style="margin-top: 15px;">📥 Скачать все планы (2 четв.)</a>
+                </div>
+
+                <h3>🎬 Презентации к урокам</h3>
+                <div class="method-card">
+                    <h4>Презентация «Состав числа 5»</h4>
+                    <p>Красочная презентация с анимацией для изучения состава числа 5. Включает домики для чисел.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                    <a href="#" class="download-link pdf">📄 Скачать PDF</a>
+                </div>
+                <div class="method-card">
+                    <h4>Презентация «Компоненты сложения»</h4>
+                    <p>Знакомство с терминами «слагаемое», «сумма». Наглядные примеры.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+
+                <h3>📝 Контрольные и проверочные работы</h3>
+                <div class="method-card">
+                    <h4>Входная диагностическая работа</h4>
+                    <p>Проверка готовности к обучению математике в 1 классе.</p>
+                    <a href="#" class="download-link pdf">📥 Скачать (2 варианта)</a>
+                </div>
+                <div class="method-card">
+                    <h4>Контрольная работа №1 «Числа от 1 до 10. Нумерация»</h4>
+                    <a href="#" class="download-link pdf">📥 Скачать (2 варианта)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== ВКЛАДКА: 2 КЛАСС ====== -->
+        <div id="tab-class2" class="tab-content">
+            <div class="method-section">
+                <h2>2️⃣ 2 класс <span class="fgos-badge">ФГОС</span></h2>
+                
+                <h3>📖 Поурочные планы</h3>
+                <div class="method-card">
+                    <h4>Раздел «Табличное умножение и деление» (36 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Конкретный смысл действия умножения <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Переместительное свойство умножения <a href="#">📄 Скачать</a></li>
+                        <li>Урок 3. Умножение на 2. Таблица умножения на 2 <a href="#">📄 Скачать</a></li>
+                        <li>Урок 4. Деление. Конкретный смысл деления <a href="#">📄 Скачать</a></li>
+                        <li>Урок 5. Умножение и деление с числом 3 <a href="#">📄 Скачать</a></li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <h4>Раздел «Уравнения» (10 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Уравнение. Решение уравнений методом подбора <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Решение уравнений на сложение и вычитание <a href="#">📄 Скачать</a></li>
+                    </ul>
+                </div>
+
+                <h3>🎬 Презентации к урокам</h3>
+                <div class="method-card">
+                    <h4>Презентация «Таблица умножения на 2 и 3»</h4>
+                    <p>Весёлые стихи и картинки для запоминания таблицы умножения.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+                <div class="method-card">
+                    <h4>Презентация «Решение уравнений»</h4>
+                    <p>Алгоритм решения уравнений. Правила нахождения неизвестного компонента.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+
+                <h3>📝 Контрольные работы</h3>
+                <div class="method-card">
+                    <h4>Контрольная работа «Умножение и деление на 2 и 3»</h4>
+                    <a href="#" class="download-link pdf">📥 Скачать (2 варианта)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== ВКЛАДКА: 3 КЛАСС ====== -->
+        <div id="tab-class3" class="tab-content">
+            <div class="method-section">
+                <h2>3️⃣ 3 класс <span class="fgos-badge">ФГОС</span></h2>
+                
+                <h3>📖 Поурочные планы</h3>
+                <div class="method-card">
+                    <h4>Раздел «Внетабличное умножение и деление» (28 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Приёмы умножения для случаев вида 23·4, 4·23 <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Деление вида 69:3, 78:2 <a href="#">📄 Скачать</a></li>
+                        <li>Урок 3. Деление с остатком. Приёмы нахождения частного и остатка <a href="#">📄 Скачать</a></li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <h4>Раздел «Доли» (10 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Доли. Образование и сравнение долей <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Нахождение доли числа <a href="#">📄 Скачать</a></li>
+                        <li>Урок 3. Нахождение числа по его доле <a href="#">📄 Скачать</a></li>
+                    </ul>
+                </div>
+
+                <h3>🎬 Презентации</h3>
+                <div class="method-card">
+                    <h4>Презентация «Деление с остатком»</h4>
+                    <p>Наглядное объяснение темы. Проверка деления с остатком.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+                <div class="method-card">
+                    <h4>Презентация «Доли и дроби»</h4>
+                    <p>Знакомство с понятием доли. Практические задания с кругом и полоской.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+
+                <h3>📝 Контрольные работы</h3>
+                <div class="method-card">
+                    <h4>Контрольная работа «Внетабличное умножение и деление»</h4>
+                    <a href="#" class="download-link pdf">📥 Скачать (2 варианта)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== ВКЛАДКА: 4 КЛАСС ====== -->
+        <div id="tab-class4" class="tab-content">
+            <div class="method-section">
+                <h2>4️⃣ 4 класс <span class="fgos-badge">ФГОС</span></h2>
+                
+                <h3>📖 Поурочные планы</h3>
+                <div class="method-card">
+                    <h4>Раздел «Скорость, время, расстояние» (12 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Скорость. Единицы скорости <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Взаимосвязь между скоростью, временем и расстоянием <a href="#">📄 Скачать</a></li>
+                        <li>Урок 3. Решение задач на движение <a href="#">📄 Скачать</a></li>
+                    </ul>
+                </div>
+
+                <div class="method-card">
+                    <h4>Раздел «Площадь и периметр» (14 часов)</h4>
+                    <ul class="plan-list">
+                        <li>Урок 1. Площадь. Единицы площади <a href="#">📄 Скачать</a></li>
+                        <li>Урок 2. Площадь прямоугольника <a href="#">📄 Скачать</a></li>
+                        <li>Урок 3. Решение задач на нахождение площади и периметра <a href="#">📄 Скачать</a></li>
+                    </ul>
+                </div>
+
+                <h3>🎬 Презентации</h3>
+                <div class="method-card">
+                    <h4>Презентация «Задачи на движение»</h4>
+                    <p>Все типы задач на движение. Формулы и схемы.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+                <div class="method-card">
+                    <h4>Презентация «Площадь прямоугольника»</h4>
+                    <p>Вывод формулы площади. Палетка. Единицы площади.</p>
+                    <a href="#" class="download-link pptx">📊 Скачать PPTX</a>
+                </div>
+
+                <h3>📝 Контрольные работы</h3>
+                <div class="method-card">
+                    <h4>Контрольная работа «Задачи на движение»</h4>
+                    <a href="#" class="download-link pdf">📥 Скачать (2 варианта)</a>
+                </div>
+                <div class="method-card">
+                    <h4>Тренировочные задания ВПР по математике</h4>
+                    <p>Типовые задания для подготовки к Всероссийской проверочной работе.</p>
+                    <a href="#" class="download-link pdf">📥 Скачать (10 вариантов)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Общая информация внизу -->
+        <div class="method-section" style="margin-top: 40px;">
+            <h2>📌 Рекомендации по использованию электронного пособия</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: #e8f4f8; padding: 20px; border-radius: 15px;">
+                    <h3 style="margin-top: 0;">🖥️ На интерактивной доске</h3>
+                    <p>Выводите тренажёры на доску. Вызывайте учеников по очереди. Остальные могут работать в тетрадях или на планшетах.</p>
+                </div>
+                <div style="background: #fff3e0; padding: 20px; border-radius: 15px;">
+                    <h3 style="margin-top: 0;">📱 На планшетах</h3>
+                    <p>При наличии мобильного класса разошлите ссылку на сайт ученикам. Каждый работает в своём темпе.</p>
+                </div>
+                <div style="background: #e8f5e9; padding: 20px; border-radius: 15px;">
+                    <h3 style="margin-top: 0;">🏠 Домашнее задание</h3>
+                    <p>Отправьте ссылку родителям. Ученик может тренироваться дома, а скриншот результата прислать учителю.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Функция переключения вкладок
+        function showTab(tabId) {
+            // Скрываем все вкладки
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Показываем выбранную
+            document.getElementById('tab-' + tabId).classList.add('active');
+            
+            // Обновляем активную кнопку
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Находим нажатую кнопку по тексту и делаем активной
+            const clickedButton = Array.from(buttons).find(btn => 
+                btn.textContent.includes(tabId === 'all' ? 'Все классы' : 
+                tabId === 'class1' ? '1 класс' : 
+                tabId === 'class2' ? '2 класс' : 
+                tabId === 'class3' ? '3 класс' : '4 класс')
+            );
+            if (clickedButton) clickedButton.classList.add('active');
+        }
+        
+        // Обработчики для кнопок-заглушек скачивания (можно заменить на реальные ссылки позже)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Здесь можно добавить реальные пути к файлам, когда они будут готовы
+            console.log('Методическая копилка загружена. Чтобы добавить реальные файлы, замените alert в onclick на ссылки.');
+        });
+    </script>
+</body>
+</html>

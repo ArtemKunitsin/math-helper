@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>3 класс · Математика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📐 3 класс · Внетабличное умножение и доли</h1>
+        <p>Электронное пособие для преподавателя начальных классов</p>
+    </header>
+
+    <nav>
+        <h3>📚 Навигация</h3>
+        <ul>
+            <li><a href="index.html">1 класс</a></li>
+            <li><a href="class2.html">2 класс</a></li>
+            <li><a href="class3.html" style="font-weight: bold;">3 класс (вы здесь)</a></li>
+            <li><a href="class4.html">4 класс</a></li>
+        </ul>
+        <h3>🧑‍🏫 Учителю</h3>
+        <ul>
+            <li><a href="method.html">📚 Методичка</a></li>
+            <li><a href="#">Самостоятельные работы</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ====== ТРЕНАЖЕР 1: ВНЕТАБЛИЧНОЕ УМНОЖЕНИЕ ====== -->
+        <section class="trainer-block">
+            <h2>🧩 Внетабличное умножение (23 · 4, 17 · 5)</h2>
+            <div class="game-box">
+                <div class="example-large">
+                    <span id="multOut1">23</span> · <span id="multOut2">4</span> = ?
+                </div>
+                <input type="number" id="multOutAnswer" placeholder="Ответ" class="answer-input">
+                <div class="button-group">
+                    <button id="checkMultOutBtn">✅ Проверить</button>
+                    <button id="nextMultOutBtn">🔄 Новый пример</button>
+                </div>
+                <p id="multOutMessage" class="message"></p>
+            </div>
+            <div class="teacher-hint">
+                <p>💡 <strong>Методическая подсказка:</strong> Напомните приём: 23 · 4 = (20 + 3) · 4 = 80 + 12 = 92. Пусть проговаривают вслух.</p>
+            </div>
+        </section>
+
+        <!-- ====== ТРЕНАЖЕР 2: ДЕЛЕНИЕ С ОСТАТКОМ ====== -->
+        <section class="trainer-block">
+            <h2>🧮 Деление с остатком</h2>
+            <div class="game-box">
+                <div class="example-large">
+                    <span id="divNum">17</span> : <span id="divDen">5</span> = ? (остаток ?)
+                </div>
+                <div class="remainder-inputs">
+                    <input type="number" id="quotientAnswer" placeholder="Частное" class="answer-input small">
+                    <span style="font-size: 24px;">ост.</span>
+                    <input type="number" id="remainderAnswer" placeholder="Остаток" class="answer-input small">
+                </div>
+                <div class="button-group">
+                    <button id="checkDivBtn">✅ Проверить</button>
+                    <button id="nextDivBtn">🔄 Новый пример</button>
+                </div>
+                <p id="divMessage" class="message"></p>
+            </div>
+            <div class="teacher-hint">
+                <p>💡 <strong>Методическая подсказка:</strong> Правило: Остаток всегда меньше делителя. Пример: 17 : 5 = 3 (ост. 2), так как 5 · 3 = 15, 17 - 15 = 2, и 2 < 5.</p>
+            </div>
+        </section>
+
+        <!-- ====== ТРЕНАЖЕР 3: ДОЛИ И ДРОБИ ====== -->
+        <section class="trainer-block">
+            <h2>🍕 Доли. Нахождение части числа</h2>
+            <div class="game-box">
+                <div class="example-large">
+                    Найди <span id="fractionNum">1/4</span> от числа <span id="wholeNum">20</span>
+                </div>
+                <input type="number" id="fractionAnswer" placeholder="Ответ" class="answer-input">
+                <div class="button-group">
+                    <button id="checkFractionBtn">✅ Проверить</button>
+                    <button id="nextFractionBtn">🔄 Новый пример</button>
+                </div>
+                <p id="fractionMessage" class="message"></p>
+            </div>
+            <div class="teacher-hint">
+                <p>💡 <strong>Методическая подсказка:</strong> Чтобы найти 1/4 от числа, нужно разделить это число на 4. Используйте наглядность: круг, разделённый на части.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script3.js"></script>
+</body>
+</html>

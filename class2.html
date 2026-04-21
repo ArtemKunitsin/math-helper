@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>2 класс · Математика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧮 2 класс · Умножение и уравнения</h1>
+        <p>Электронное пособие для преподавателя начальных классов</p>
+    </header>
+
+    <nav>
+        <h3>📚 Навигация</h3>
+        <ul>
+            <li><a href="index.html">← 1 класс</a></li>
+            <li><a href="class2.html" style="font-weight: bold;">2 класс (вы здесь)</a></li>
+            <li><a href="class3.html">3 класс</a></li>
+            <li><a href="class4.html">4 класс</a></li>
+        </ul>
+        <h3>🧑‍🏫 Учителю</h3>
+        <ul>
+            <li><a href="#">Методичка 2 кл.</a></li>
+            <li><a href="#">Контрольные работы</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ====== ТРЕНАЖЕР 1: ТАБЛИЦА УМНОЖЕНИЯ ====== -->
+        <section class="trainer-block">
+            <h2>✖️ Тренажер «Таблица умножения» (2–9)</h2>
+            <div class="game-box">
+                <div class="example-large">
+                    <span id="mult1">5</span> · <span id="mult2">3</span> = ?
+                </div>
+                <input type="number" id="multAnswer" placeholder="Ответ" class="answer-input">
+                <div class="button-group">
+                    <button id="checkMultBtn">✅ Проверить</button>
+                    <button id="nextMultBtn">🔄 Новый пример</button>
+                </div>
+                <p id="multMessage" class="message"></p>
+            </div>
+            <div class="teacher-hint">
+                <p>💡 <strong>Методическая подсказка:</strong> Напомните детям, что от перестановки множителей произведение не меняется. Используйте таблицу Пифагора как наглядное пособие.</p>
+            </div>
+        </section>
+
+        <!-- ====== ТРЕНАЖЕР 2: УРАВНЕНИЯ НА СЛОЖЕНИЕ/ВЫЧИТАНИЕ ====== -->
+        <section class="trainer-block">
+            <h2>⚖️ Тренажер «Найди X» (простые уравнения)</h2>
+            <div class="game-box">
+                <div class="example-large">
+                    <span id="eqText">x + 5 = 12</span>
+                </div>
+                <input type="number" id="eqAnswer" placeholder="x = ?" class="answer-input">
+                <div class="button-group">
+                    <button id="checkEqBtn">✅ Проверить</button>
+                    <button id="nextEqBtn">🔄 Новое уравнение</button>
+                </div>
+                <p id="eqMessage" class="message"></p>
+            </div>
+            <div class="teacher-hint">
+                <p>💡 <strong>Методическая подсказка:</strong> Учите детей проговаривать: «Чтобы найти неизвестное слагаемое, нужно из суммы вычесть известное слагаемое».</p>
+            </div>
+        </section>
+
+        <!-- ====== ТРЕНАЖЕР 3: ПОРЯДОК ДЕЙСТВИЙ ====== -->
+        <section class="trainer-block">
+            <h2>🔢 Порядок действий (со скобками)</h2>
+            <div class="game-box">
+                <div class="example-large">
+                    <span id="orderText">(2 + 3) · 4 = ?</span>
+                </div>
+                <input type="number" id="orderAnswer" placeholder="Ответ" class="answer-input">
+                <div class="button-group">
+                    <button id="checkOrderBtn">✅ Проверить</button>
+                    <button id="nextOrderBtn">🔄 Новый пример</button>
+                </div>
+                <p id="orderMessage" class="message"></p>
+            </div>
+            <div class="teacher-hint">
+                <p>💡 <strong>Методическая подсказка:</strong> Пусть ученик проговаривает алгоритм: 1) Действие в скобках, 2) Умножение/деление, 3) Сложение/вычитание.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>
